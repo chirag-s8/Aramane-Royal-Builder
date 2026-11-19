@@ -49,13 +49,23 @@ c:\Users\chira\OneDrive\Desktop\Aramane Proposal\index.html
 ```
 
 ### Option 2: Zero-Dependency Local Node Server
-You can run the built-in HTTP server:
+You can run the built-in local development server:
 ```bash
 npm start
 # or:
-node server.js
+node local-server.js
 ```
 Then visit: `http://localhost:3000`
+
+---
+
+## ☁️ Deployment on Vercel (Static Hosting)
+
+This project is configured as a pure **Static Website** for Vercel deployment:
+- **Root Entrypoint:** Served directly from `index.html`.
+- **Framework Preset:** `Other` (Static Site).
+- **Configuration:** Handled automatically via `vercel.json`.
+- **Static Assets:** Clean routing for `/styles`, `/scripts`, `/assets/images`, and `/assets/docs/Aramane_Royal_Builder_Proposal_BRD-2026-001.pdf`.
 
 ---
 
@@ -64,8 +74,9 @@ Then visit: `http://localhost:3000`
 ```
 Aramane Proposal/
 ├── index.html                   # Master proposal website
-├── package.json                 # Project configuration
-├── server.js                    # Built-in zero-dependency HTTP server
+├── vercel.json                  # Vercel static deployment configuration
+├── package.json                 # Project configuration (scripts & metadata)
+├── local-server.js              # Local development preview server
 ├── README.md                    # Project documentation & walkthrough
 ├── assets/
 │   ├── images/
