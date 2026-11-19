@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRANDYCE × ARAMANE ROYAL BUILDER | Digital Proposal BRD-2026-001</title>
+  <meta name="description" content="A strategic digital website proposal prepared exclusively for Aramane Royal Builder by Brandyce. Architecture Meets Digital Experience.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#08080A',
+              charcoal: '#121215',
+              red: '#D32F2F',
+              redglow: 'rgba(211, 47, 47, 0.4)',
+              grey: '#A0A0A5',
+              silver: '#E4E4E7'
+            },
+            arch: {
+              ivory: '#FAF8F5',
+              limestone: '#F2EEE8',
+              stone: '#E5E1D8',
+              border: '#DCD7CE',
+              taupe: '#847E72',
+              charcoal: '#181716',
+              concrete: '#ECE8E1'
+            }
+          },
+          fontFamily: {
+            display: ['Cinzel', 'serif'],
+            editorial: ['Cormorant Garamond', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            heading: ['Syne', 'sans-serif'],
+            mono: ['Space Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Architectural Design System Styles -->
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="bg-brand-black text-arch-charcoal font-sans antialiased selection:bg-stone-300 selection:text-stone-900">
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container">
+    <div id="scrollProgressBar" class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Sticky Minimal Navigation -->
+  <header id="mainNavbar" class="navbar text-white">
+    <div class="flex items-center gap-6">
+      <a href="#section-hero" class="flex items-center gap-3 group">
+        <!-- Brandyce Wordmark / Logo -->
+        <div class="h-6 flex items-center">
+          <img src="assets/images/brandyce_logo_light.png" alt="Brandyce Logo" class="h-6 w-auto object-contain dark-nav-logo hidden">
+          <img src="assets/images/brandyce_logo_dark.png" alt="Brandyce Logo" class="h-6 w-auto object-contain light-nav-logo">
+        </div>
+        <span class="text-[10px] font-mono tracking-widest uppercase opacity-40 group-hover:opacity-100 transition-opacity">× ARAMANE</span>
+      </a>
+      <span class="hidden md:inline-block h-3 w-px bg-current opacity-20"></span>
+      <span class="hidden md:inline-block text-[11px] font-mono tracking-widest uppercase opacity-60">REF: BRD-2026-001</span>
+    </div>
+
+    <!-- Navigation Anchors -->
+    <nav class="hidden lg:flex items-center gap-8 text-xs font-mono tracking-wider uppercase opacity-80">
+      <a href="#section-opportunity" class="nav-anchor hover:opacity-100 transition-opacity">01 Opportunity</a>
+      <a href="#section-vision" class="nav-anchor hover:opacity-100 transition-opacity">02 Vision</a>
+      <a href="#section-website" class="nav-anchor hover:opacity-100 transition-opacity">03 Website</a>
+      <a href="#section-build" class="nav-anchor hover:opacity-100 transition-opacity">04 Build</a>
+      <a href="#section-investment" class="nav-anchor hover:opacity-100 transition-opacity">05 Investment</a>
+      <a href="#section-roadmap" class="nav-anchor hover:opacity-100 transition-opacity">06 Roadmap</a>
+      <a href="#section-closing" class="nav-anchor hover:opacity-100 transition-opacity">07 Approval</a>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="flex items-center gap-3">
+      <!-- Audio Haptic Toggle -->
+      <button id="soundToggleBtn" class="px-3 py-1.5 border border-current opacity-40 hover:opacity-100 transition-opacity text-[10px] font-mono tracking-widest uppercase flex items-center gap-1.5" title="Toggle tactile interaction audio">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-current"></span>
+        <span class="sound-label">AUDIO: OFF</span>
+      </button>
+
+      <!-- Quick Action / Download -->
+      <button class="download-proposal-pdf-btn px-4 py-1.5 bg-white text-stone-900 border border-white hover:bg-transparent hover:text-white transition-all duration-300 text-[11px] font-mono tracking-widest uppercase font-semibold">
+        PDF ↓
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       SECTION 01 — OPENING EXPERIENCE (BRANDYCE IDENTITY)
+       Brand Colours: Deep Charcoal / Black, Red Symbol Accents, Grey Wordmark
+       Design: Velvety Luxury Black, No Grids, Full Word BRANDYCE Watermark,
+       No Total Cost Mentioned, Cinematic Stagger & Particle Animations
+       ======================================================================== -->
+  <section id="section-hero" class="hero-section relative min-h-screen text-white flex flex-col justify-between overflow-hidden border-b border-white/10">
+    <div class="noise-overlay"></div>
+
+    <!-- Ambient Crimson Light Flare -->
+    <div class="hero-crimson-aura"></div>
+
+    <!-- Floating Interactive Stardust Canvas -->
+    <canvas id="heroParticlesCanvas"></canvas>
+
+    <!-- Full Word BRANDYCE Background Watermark (Fully Visible) -->
+    <div class="brandyce-watermark-wrap">
+      <span class="brandyce-watermark">BRANDYCE</span>
+    </div>
+
+    <!-- Top Spacing for Navbar -->
+    <div class="pt-28 md:pt-36"></div>
+
+    <!-- Center Hero Presentation -->
+    <div class="arch-container relative z-10 w-full py-8 md:py-12">
+      <!-- Tag Reveal -->
+      <div class="anim-reveal-hero anim-delay-1 mb-8 flex flex-col items-start">
+        <div class="inline-flex items-center gap-3 px-3.5 py-1.5 border border-white/15 bg-white/[0.04] backdrop-blur-md">
+          <span class="w-2 h-2 rounded-full bg-brand-red animate-ping"></span>
+          <span class="font-mono text-[11px] tracking-[0.25em] uppercase text-brand-silver">A DIGITAL EXPERIENCE PROPOSAL</span>
+        </div>
+
+        <!-- Prominent Brandyce Logo (Levitation & Ray Glow) -->
+        <div class="hero-logo-box mt-6 mb-2">
+          <div class="hero-logo-glow"></div>
+          <img src="assets/images/brandyce_logo_dark.png" alt="Brandyce Identity" class="h-20 sm:h-24 md:h-28 w-auto object-contain relative z-10 filter drop-shadow-[0_0_20px_rgba(211,47,47,0.35)]">
+        </div>
+      </div>
+
+      <!-- Main Headline (Smooth Cinematic Entrance) -->
+      <div class="max-w-4xl mb-8 anim-reveal-hero anim-delay-2">
+        <h1 class="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight text-white leading-[1.05]">
+          A stronger first impression.<br>
+          <span class="text-stone-400 font-editorial italic font-normal">A better way to grow.</span>
+        </h1>
+      </div>
+
+      <!-- Supporting Text -->
+      <div class="max-w-2xl mb-12 anim-reveal-hero anim-delay-3">
+        <p class="text-stone-300 text-lg md:text-xl font-light leading-relaxed">
+          A strategic website experience for <strong class="text-white font-medium">Aramane Royal Builder</strong> — designed to earn trust, showcase projects and turn customer interest into meaningful enquiries.
+        </p>
+      </div>
+
+      <!-- Metadata Dossier Strip (No Total Cost Mentioned) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-8 border-t border-white/15 text-xs font-mono anim-reveal-hero anim-delay-4">
+        <!-- Client -->
+        <div class="p-4 border border-white/10 bg-white/[0.02] backdrop-blur-sm">
+          <span class="text-stone-500 uppercase tracking-widest block mb-2 text-[10px]">Prepared Exclusively For</span>
+          <div class="flex items-center gap-3">
+            <img src="assets/images/aramane_logo.png" alt="Aramane Logo" class="h-8 w-auto object-contain bg-white/90 p-0.5 rounded">
+            <div>
+              <strong class="text-white text-sm block font-sans tracking-wide">ARAMANE ROYAL BUILDER</strong>
+              <span class="text-stone-400 text-[10px]">Real Estate & Construction</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agency -->
+        <div class="p-4 border border-white/10 bg-white/[0.02] backdrop-blur-sm">
+          <span class="text-stone-500 uppercase tracking-widest block mb-2 text-[10px]">Prepared By</span>
+          <strong class="text-white text-sm block font-sans tracking-wide">BRANDYCE</strong>
+          <span class="text-stone-400 text-[10px]">Digital Marketing | Branding | Web Development</span>
+        </div>
+
+        <!-- Reference & Date -->
+        <div class="p-4 border border-white/10 bg-white/[0.02] backdrop-blur-sm">
+          <span class="text-stone-500 uppercase tracking-widest block mb-2 text-[10px]">Proposal Reference</span>
+          <strong class="text-brand-silver text-sm block font-mono">BRD-2026-001</strong>
+          <span class="text-stone-400 text-[10px]">CONFIDENTIAL & OFFICIAL</span>
+        </div>
+
+        <!-- Scope / Engagement Focus (Replaced cost with Engagement Scope) -->
+        <div class="p-4 border border-white/10 bg-white/[0.02] backdrop-blur-sm flex flex-col justify-between">
+          <span class="text-stone-500 uppercase tracking-widest block mb-2 text-[10px]">Project Scope</span>
+          <div>
+            <strong class="text-white text-sm block font-sans tracking-wide">FULL DIGITAL ARCHITECTURE</strong>
+            <span class="text-stone-400 text-[10px] font-mono">Design • Development • Database</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Scroll Indicator (Animated Floating Chevron) -->
+    <div class="arch-container relative z-10 w-full pb-10 flex items-center justify-between text-xs font-mono text-stone-400 anim-reveal-hero anim-delay-5">
+      <a href="#section-opportunity" class="inline-flex items-center gap-3 hover:text-white transition-colors duration-300 group">
+        <span class="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:border-white transition-colors scroll-bounce-arrow">
+          ↓
+        </span>
+        <span class="tracking-[0.2em] uppercase font-bold text-stone-300 group-hover:text-white">EXPLORE THE PROPOSAL ↓</span>
+      </a>
+      <span class="hidden sm:inline-block tracking-widest uppercase opacity-40">ARCHITECTURE MEETS DIGITAL EXPERIENCE</span>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 02 — WHY A WEBSITE MATTERS (01 / THE OPPORTUNITY)
+       Architectural Identity: Warm Ivory, Limestone Beige, Soft Stone Grey
+       ======================================================================== -->
+  <section id="section-opportunity" class="arch-section arch-grid-bg">
+    <div class="arch-container">
+      <!-- Section Label & Heading -->
+      <div class="max-w-3xl mb-16">
+        <div class="section-tag">01 / THE OPPORTUNITY</div>
+        <h2 class="section-headline">
+          Your next customer is already searching.<br>
+          <span class="font-editorial italic font-normal text-stone-600">What will they find?</span>
+        </h2>
+        <div class="space-y-4 text-stone-700 text-lg md:text-xl font-light leading-relaxed">
+          <p>
+            Buying a property, choosing a construction partner or investing in a real estate development is a major decision.
+          </p>
+          <p>
+            Before making that decision, customers research the company, explore its projects, compare credibility and look for reasons to trust the business.
+          </p>
+          <p class="font-normal text-stone-900">
+            Today, a company's digital presence plays an important role in shaping that first impression. For Aramane Royal Builder, a professionally designed website can become much more than an online company profile.
+          </p>
+        </div>
+      </div>
+
+      <!-- 5 Value Pillars (Architectural Grid) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <!-- Pillar 01 -->
+        <div class="arch-card flex flex-col justify-between">
+          <div>
+            <span class="font-mono text-xs tracking-widest text-stone-400 block mb-4">PILLAR 01</span>
+            <h3 class="font-heading text-xl font-semibold text-stone-900 mb-3 tracking-tight">A TRUST-BUILDING PLATFORM</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">
+              Present the company's experience, expertise, services and business identity professionally to instantly reassure discerning property investors.
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-stone-200 flex items-center justify-between text-xs font-mono text-stone-400">
+            <span>CREDIBILITY</span>
+            <span>01 / 05</span>
+          </div>
+        </div>
+
+        <!-- Pillar 02 -->
+        <div class="arch-card flex flex-col justify-between">
+          <div>
+            <span class="font-mono text-xs tracking-widest text-stone-400 block mb-4">PILLAR 02</span>
+            <h3 class="font-heading text-xl font-semibold text-stone-900 mb-3 tracking-tight">A PROJECT SHOWCASE</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">
+              Give completed and ongoing developments the visibility they deserve through beautiful photography, detailed project information and dedicated project pages.
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-stone-200 flex items-center justify-between text-xs font-mono text-stone-400">
+            <span>PORTFOLIO ASSET</span>
+            <span>02 / 05</span>
+          </div>
+        </div>
+
+        <!-- Pillar 03 -->
+        <div class="arch-card flex flex-col justify-between">
+          <div>
+            <span class="font-mono text-xs tracking-widest text-stone-400 block mb-4">PILLAR 03</span>
+            <h3 class="font-heading text-xl font-semibold text-stone-900 mb-3 tracking-tight">A CUSTOMER ACQUISITION CHANNEL</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">
+              Convert website visitors into genuine enquiries through strategically positioned contact forms, WhatsApp and direct calling options.
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-stone-200 flex items-center justify-between text-xs font-mono text-stone-400">
+            <span>LEAD GENERATION</span>
+            <span>03 / 05</span>
+          </div>
+        </div>
+
+        <!-- Pillar 04 -->
+        <div class="arch-card flex flex-col justify-between">
+          <div>
+            <span class="font-mono text-xs tracking-widest text-stone-400 block mb-4">PILLAR 04</span>
+            <h3 class="font-heading text-xl font-semibold text-stone-900 mb-3 tracking-tight">A 24/7 DIGITAL PRESENCE</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">
+              Allow potential customers, investors and business partners to discover the company and its offerings at any time, anywhere in the world.
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-stone-200 flex items-center justify-between text-xs font-mono text-stone-400">
+            <span>GLOBAL REACH</span>
+            <span>04 / 05</span>
+          </div>
+        </div>
+
+        <!-- Pillar 05 -->
+        <div class="arch-card flex flex-col justify-between md:col-span-2 lg:col-span-2 bg-arch-limestone">
+          <div>
+            <span class="font-mono text-xs tracking-widest text-stone-400 block mb-4">PILLAR 05</span>
+            <h3 class="font-heading text-xl font-semibold text-stone-900 mb-3 tracking-tight">A LONG-TERM BUSINESS ASSET</h3>
+            <p class="text-stone-600 text-sm leading-relaxed max-w-xl">
+              Create a central digital platform that can support future marketing campaigns, search visibility, brand development and business expansion as Aramane Royal Builder continues to build bigger landmarks.
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-stone-300 flex items-center justify-between text-xs font-mono text-stone-500">
+            <span>SCALABILITY & VALUATION</span>
+            <span>05 / 05</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing Opportunity Statement -->
+      <div class="p-8 md:p-12 border border-stone-300 bg-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div>
+          <span class="font-mono text-xs text-stone-400 uppercase tracking-widest block mb-2">STRATEGIC PRINCIPLE</span>
+          <p class="font-editorial text-2xl md:text-3xl italic text-stone-900">
+            "A strong business deserves a digital presence that reflects its true potential."
+          </p>
+        </div>
+        <a href="#section-vision" class="btn-arch whitespace-nowrap text-xs">
+          EXPLORE OUR VISION →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 03 — OUR VISION (02 / THE VISION)
+       ======================================================================== -->
+  <section id="section-vision" class="arch-section arch-section-alt">
+    <div class="arch-container">
+      <!-- Section Label & Heading -->
+      <div class="max-w-3xl mb-16">
+        <div class="section-tag">02 / THE VISION</div>
+        <h2 class="section-headline">
+          Not just a website.<br>
+          <span class="font-editorial italic font-normal text-stone-600">A business-building tool.</span>
+        </h2>
+        <div class="space-y-4 text-stone-700 text-lg md:text-xl font-light leading-relaxed">
+          <p>
+            At Brandyce, our approach goes beyond designing attractive pages.
+          </p>
+          <p>
+            We combine strategy, creative direction, user experience and technology to create a digital platform with a clear purpose.
+          </p>
+          <p class="font-normal text-stone-900">
+            We want visitors to understand the company, explore its work, develop confidence and easily connect with the team.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 Pillars Quadrant -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <!-- Pillar 01: Strategy -->
+        <div class="arch-card bg-white p-8 md:p-10 border border-stone-300 relative group">
+          <div class="flex items-start justify-between mb-6">
+            <span class="font-mono text-xs tracking-widest text-stone-400">PILLAR 01</span>
+            <span class="w-8 h-8 rounded-full border border-stone-200 flex items-center justify-center font-mono text-xs text-stone-500">01</span>
+          </div>
+          <h3 class="font-heading text-2xl font-semibold text-stone-900 mb-4 tracking-tight">STRATEGY</h3>
+          <p class="text-stone-600 text-base leading-relaxed mb-6">
+            Understanding the business, its audience, positioning and objectives before starting the design. We identify what prospective buyers look for when selecting Aramane Royal Builder.
+          </p>
+          <div class="flex flex-wrap gap-2 text-[11px] font-mono text-stone-500">
+            <span class="px-2.5 py-1 bg-stone-100 border border-stone-200">Audience Profiling</span>
+            <span class="px-2.5 py-1 bg-stone-100 border border-stone-200">Competitive Benchmarking</span>
+            <span class="px-2.5 py-1 bg-stone-100 border border-stone-200">Positioning Architecture</span>
+          </div>
+        </div>
+
+        <!-- Pillar 02: Design -->
+        <div class="arch-card bg-white p-8 md:p-10 border border-stone-300 relative group">
+          <div class="flex items-start justify-between mb-6">
+            <span class="font-mono text-xs tracking-widest text-stone-400">PILLAR 02</span>
+            <span class="w-8 h-8 rounded-full border border-stone-200 flex items-center justify-center font-mono text-xs text-stone-500">02</span>
+          </div>
+          <h3 class="font-heading text-2xl font-semibold text-stone-900 mb-4 tracking-tight">DESIGN</h3>
+          <p class="text-stone-600 text-base leading-relaxed mb-6">
+            Creating a distinctive visual experience inspired by premium architectural and real estate brands. Refined editorial typography, generous whitespace, and luxury project photography.
+          </p>
+          <div class="flex flex-wrap gap-2 text-[11px] font-mono text-stone-500">
+            <span class="px-2.5 py-1 bg-stone-100 border border-stone-200">Architectural Editorial UI</span>
+            <span class="px-2.5 py-1 bg-stone-100 border border-stone-200">Custom Typography Scale</span>
+            <span class="px-2.5 py-1 bg-stone-100 border border-stone-200">Fluid Transitions</span>
+          </div>
+        </div>
+
+        <!-- Pillar 03: Technology -->
+        <div class="arch-card bg-white p-8 md:p-10 border border-stone-300 relative group">
+          <div class="flex items-start justify-between mb-6">
+            <span class="font-mono text-xs tracking-widest text-stone-400">PILLAR 03</span>
+            <span class="w-8 h-8 rounded-full border border-stone-200 flex items-center justify-center font-mono text-xs text-stone-500">03</span>
+          </div>
+          <h3 class="font-heading text-2xl font-semibold text-stone-900 mb-4 tracking-tight">TECHNOLOGY</h3>
+          <p class="text-stone-600 text-base leading-relaxed mb-6">
+            Building a responsive, secure and scalable website with a functional backend and database. Delivering effortless mobile performance, bank-grade SSL security, and an easy CMS.
+          </p>
+          <div class="flex flex-wrap gap-2 text-[11px] font-mono text-stone-500">
+            <span class="px-2.5 py-1 bg-stone-100 border border-stone-200">Scalable Database</span>
+            <span class="px-2.5 py-1 bg-stone-100 border border-stone-200">Custom Admin CMS</span>
+            <span class="px-2.5 py-1 bg-stone-100 border border-stone-200">Fast CDN Infrastructure</span>
+          </div>
+        </div>
+
+        <!-- Pillar 04: Growth -->
+        <div class="arch-card bg-white p-8 md:p-10 border border-stone-300 relative group">
+          <div class="flex items-start justify-between mb-6">
+            <span class="font-mono text-xs tracking-widest text-stone-400">PILLAR 04</span>
+            <span class="w-8 h-8 rounded-full border border-stone-200 flex items-center justify-center font-mono text-xs text-stone-500">04</span>
+          </div>
+          <h3 class="font-heading text-2xl font-semibold text-stone-900 mb-4 tracking-tight">GROWTH</h3>
+          <p class="text-stone-600 text-base leading-relaxed mb-6">
+            Structuring the website to support enquiries, search visibility and future digital marketing activities. High-converting CTAs, Google Search Console, and Google Analytics 4 tracking.
+          </p>
+          <div class="flex flex-wrap gap-2 text-[11px] font-mono text-stone-500">
+            <span class="px-2.5 py-1 bg-stone-100 border border-stone-200">Lead Funnel Architecture</span>
+            <span class="px-2.5 py-1 bg-stone-100 border border-stone-200">Technical SEO Foundation</span>
+            <span class="px-2.5 py-1 bg-stone-100 border border-stone-200">WhatsApp Lead Automation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 04 — THE DIGITAL EXPERIENCE (03 / THE WEBSITE)
+       Showcase of 9 Key Website Pages with Interactive Preview Mockup
+       ======================================================================== -->
+  <section id="section-website" class="arch-section bg-arch-ivory">
+    <div class="arch-container">
+      <!-- Section Label & Heading -->
+      <div class="max-w-3xl mb-12">
+        <div class="section-tag">03 / THE WEBSITE</div>
+        <h2 class="section-headline">
+          Designed to impress.<br>
+          <span class="font-editorial italic font-normal text-stone-600">Structured to perform.</span>
+        </h2>
+        <p class="text-stone-700 text-lg md:text-xl font-light leading-relaxed">
+          The digital ecosystem proposed for Aramane Royal Builder comprises 9 custom-crafted architectural pages, each engineered to guide prospective property buyers and investors along an intuitive journey from curiosity to commitment.
+        </p>
+      </div>
+
+      <!-- Interactive Architectural Page Inspector -->
+      <div class="bg-white border border-stone-300 shadow-xl mb-16 overflow-hidden">
+        <!-- Browser Top Bar Mockup -->
+        <div class="bg-stone-900 px-6 py-3 flex items-center justify-between text-xs font-mono text-stone-400 border-b border-stone-800">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-stone-700 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-stone-700 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-stone-700 inline-block"></span>
+            <span class="ml-4 text-stone-300 font-sans tracking-wide">https://www.aramaneroyalbuilder.com</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="hidden sm:inline-block text-[11px] text-emerald-400">● LIVE ARCHITECTURE DEMO</span>
+            <button id="openAdminDemoBtn" class="px-2.5 py-1 bg-stone-800 text-stone-200 hover:text-white border border-stone-700 text-[10px] tracking-wider uppercase transition-colors">
+              ADMIN CMS DEMO ↗
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[640px]">
+          <!-- Left: Page Selector Navigation -->
+          <div class="lg:col-span-4 border-r border-stone-200 bg-arch-limestone p-6 flex flex-col justify-between">
+            <div>
+              <span class="font-mono text-xs text-stone-500 uppercase tracking-widest block mb-4">WEBSITE STRUCTURE (9 SECTIONS)</span>
+              <div id="projectTabsContainer" class="flex flex-col gap-2">
+                <!-- Injected via JavaScript -->
+              </div>
+            </div>
+            <div class="pt-6 mt-6 border-t border-stone-300 text-xs font-mono text-stone-500 flex items-center justify-between">
+              <span>RESPONSIVE ENGINE</span>
+              <span>100% TAILOR-MADE</span>
+            </div>
+          </div>
+
+          <!-- Right: Page Deep-Dive Preview -->
+          <div class="lg:col-span-8 p-8 md:p-12 flex flex-col justify-between bg-white">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span id="showcaseTag" class="px-2.5 py-1 text-[10px] font-mono tracking-widest uppercase bg-stone-100 text-stone-800 border border-stone-300 font-semibold">
+                  CORE LANDING
+                </span>
+                <span id="showcaseNum" class="font-heading text-3xl font-light text-stone-400">01</span>
+              </div>
+
+              <h3 id="showcaseTitle" class="font-heading text-3xl md:text-4xl font-semibold text-stone-900 mb-2 tracking-tight">
+                HOME PAGE
+              </h3>
+              <p id="showcaseSubtitle" class="font-editorial text-xl italic text-stone-500 mb-6">
+                The Gateway of First Impressions
+              </p>
+
+              <!-- High-res Architectural Image Preview -->
+              <div class="img-reveal-wrapper h-64 md:h-80 w-full mb-6 border border-stone-200 bg-stone-100 relative">
+                <img id="showcasePreviewImg" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop" alt="Page Mockup Preview" class="w-full h-full object-cover transition-opacity duration-300">
+                <div class="absolute bottom-3 right-3 px-3 py-1 bg-stone-900/80 backdrop-blur-sm text-white font-mono text-[10px] tracking-widest uppercase">
+                  ARCHITECTURAL PREVIEW
+                </div>
+              </div>
+
+              <!-- Page Description -->
+              <p id="showcaseDesc" class="text-stone-700 text-base leading-relaxed mb-6 font-light">
+                A high-impact, premium introduction to Aramane Royal Builder. Features a full-screen hero showcase, distinctive architectural geometry, company credentials, high-level service summaries, featured ongoing projects, and strategic consultation triggers.
+              </p>
+
+              <!-- Deliverable Highlights -->
+              <div class="p-4 bg-arch-ivory border border-stone-200">
+                <span class="font-mono text-xs text-stone-500 uppercase tracking-widest block mb-2">KEY FUNCTIONAL CAPABILITIES</span>
+                <ul id="showcaseHighlights" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-stone-700">
+                  <!-- Injected via JavaScript -->
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-6 mt-6 border-t border-stone-200 flex flex-wrap items-center justify-between gap-4">
+              <span class="text-xs font-mono text-stone-500">Every page custom designed without templates</span>
+              <button class="open-discuss-btn btn-arch text-xs py-2 px-5">
+                DISCUSS THIS SECTION
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 05 — HOW WE WILL BUILD IT (04 / THE BUILD)
+       Complete Technical Deliverables in 7 Organized Architectural Categories
+       ======================================================================== -->
+  <section id="section-build" class="arch-section arch-section-alt">
+    <div class="arch-container">
+      <!-- Section Label & Heading -->
+      <div class="max-w-3xl mb-16">
+        <div class="section-tag">04 / THE BUILD</div>
+        <h2 class="section-headline">
+          The craft behind the experience.
+        </h2>
+        <p class="text-stone-700 text-lg md:text-xl font-light leading-relaxed">
+          Every element of the website will be thoughtfully planned, designed, developed and tested to deliver a premium digital experience.
+        </p>
+      </div>
+
+      <!-- Categories Accordion / Grid -->
+      <div class="space-y-4 mb-16">
+        <!-- Category A: Domain & Hosting Infrastructure -->
+        <div class="arch-card bg-white p-0 border border-stone-300 overflow-hidden">
+          <div class="deliverable-toggle p-6 md:p-8 flex items-center justify-between cursor-pointer hover:bg-stone-50/80 transition-colors">
+            <div class="flex items-center gap-4">
+              <span class="w-10 h-10 rounded-full bg-stone-900 text-white flex items-center justify-center font-mono text-sm font-bold">A</span>
+              <div>
+                <h3 class="font-heading text-xl font-semibold text-stone-900">DOMAIN & HOSTING INFRASTRUCTURE</h3>
+                <span class="text-xs font-mono text-stone-500">7 Core Deliverables • Enterprise Grade</span>
+              </div>
+            </div>
+            <span class="deliverable-icon font-mono text-xl text-stone-400 transition-transform duration-300">↓</span>
+          </div>
+          <div class="deliverable-body px-6 md:px-8 pb-8 pt-2 border-t border-stone-200">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-stone-700 pt-4">
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">01</span><span>Domain name registration for one year.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">02</span><span>Premium web hosting setup for one year.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">03</span><span>SSL certificate installation and HTTPS configuration.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">04</span><span>DNS configuration and domain integration.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">05</span><span>Business email configuration assistance.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">06</span><span>Server and hosting environment configuration.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">07</span><span>Website deployment and live server setup.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category B: UI/UX Design & Creative Direction -->
+        <div class="arch-card bg-white p-0 border border-stone-300 overflow-hidden">
+          <div class="deliverable-toggle p-6 md:p-8 flex items-center justify-between cursor-pointer hover:bg-stone-50/80 transition-colors">
+            <div class="flex items-center gap-4">
+              <span class="w-10 h-10 rounded-full bg-stone-900 text-white flex items-center justify-center font-mono text-sm font-bold">B</span>
+              <div>
+                <h3 class="font-heading text-xl font-semibold text-stone-900">UI/UX DESIGN & CREATIVE DIRECTION</h3>
+                <span class="text-xs font-mono text-stone-500">11 Core Deliverables • Bespoke Art Direction</span>
+              </div>
+            </div>
+            <span class="deliverable-icon font-mono text-xl text-stone-400 transition-transform duration-300">↓</span>
+          </div>
+          <div class="deliverable-body px-6 md:px-8 pb-8 pt-2 border-t border-stone-200">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-stone-700 pt-4">
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">01</span><span>Complete website structure and sitemap planning.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">02</span><span>Custom UI/UX design strategy.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">03</span><span>Premium visual direction.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">04</span><span>Custom homepage design.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">05</span><span>Professional typography and colour system.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">06</span><span>Modern layouts and intuitive navigation.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">07</span><span>Responsive design for desktops, tablets and smartphones.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">08</span><span>Interactive elements and modern visual components.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">09</span><span>Custom banners, icons and graphical elements.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">10</span><span>Strategic enquiry and call-to-action placement.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">11</span><span>User journey optimisation for lead conversion.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category C: Website Design & Development -->
+        <div class="arch-card bg-white p-0 border border-stone-300 overflow-hidden">
+          <div class="deliverable-toggle p-6 md:p-8 flex items-center justify-between cursor-pointer hover:bg-stone-50/80 transition-colors">
+            <div class="flex items-center gap-4">
+              <span class="w-10 h-10 rounded-full bg-stone-900 text-white flex items-center justify-center font-mono text-sm font-bold">C</span>
+              <div>
+                <h3 class="font-heading text-xl font-semibold text-stone-900">WEBSITE DESIGN & DEVELOPMENT</h3>
+                <span class="text-xs font-mono text-stone-500">10 Core Deliverables • High-Speed Frontend</span>
+              </div>
+            </div>
+            <span class="deliverable-icon font-mono text-xl text-stone-400 transition-transform duration-300">↓</span>
+          </div>
+          <div class="deliverable-body px-6 md:px-8 pb-8 pt-2 border-t border-stone-200">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-stone-700 pt-4">
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">01</span><span>Custom website design and development.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">02</span><span>Responsive frontend development.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">03</span><span>Custom navigation menu and footer.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">04</span><span>Interactive animations and transitions.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">05</span><span>WhatsApp integration.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">06</span><span>Click-to-call functionality.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">07</span><span>Enquiry and lead generation forms.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">08</span><span>Social media integration.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">09</span><span>Google Maps integration.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">10</span><span>Search-engine-friendly website structure.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category D: Database & Backend Development -->
+        <div class="arch-card bg-white p-0 border border-stone-300 overflow-hidden">
+          <div class="deliverable-toggle p-6 md:p-8 flex items-center justify-between cursor-pointer hover:bg-stone-50/80 transition-colors">
+            <div class="flex items-center gap-4">
+              <span class="w-10 h-10 rounded-full bg-stone-900 text-white flex items-center justify-center font-mono text-sm font-bold">D</span>
+              <div>
+                <h3 class="font-heading text-xl font-semibold text-stone-900">DATABASE & BACKEND DEVELOPMENT</h3>
+                <span class="text-xs font-mono text-stone-500">10 Core Deliverables • Dynamic Project CMS</span>
+              </div>
+            </div>
+            <span class="deliverable-icon font-mono text-xl text-stone-400 transition-transform duration-300">↓</span>
+          </div>
+          <div class="deliverable-body px-6 md:px-8 pb-8 pt-2 border-t border-stone-200">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-stone-700 pt-4">
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">01</span><span>Database architecture and configuration.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">02</span><span>Backend development and integration.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">03</span><span>Dynamic content management system.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">04</span><span>Project listing and management functionality.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">05</span><span>Custom admin dashboard.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">06</span><span>Ability to add, edit and update project information.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">07</span><span>Image and gallery management.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">08</span><span>Enquiry form data storage.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">09</span><span>Database backup configuration.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">10</span><span>Secure administrative access.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category E: Search Engine Optimisation (SEO) -->
+        <div class="arch-card bg-white p-0 border border-stone-300 overflow-hidden">
+          <div class="deliverable-toggle p-6 md:p-8 flex items-center justify-between cursor-pointer hover:bg-stone-50/80 transition-colors">
+            <div class="flex items-center gap-4">
+              <span class="w-10 h-10 rounded-full bg-stone-900 text-white flex items-center justify-center font-mono text-sm font-bold">E</span>
+              <div>
+                <h3 class="font-heading text-xl font-semibold text-stone-900">SEARCH ENGINE OPTIMISATION (SEO)</h3>
+                <span class="text-xs font-mono text-stone-500">11 Core Deliverables • Google Visibility</span>
+              </div>
+            </div>
+            <span class="deliverable-icon font-mono text-xl text-stone-400 transition-transform duration-300">↓</span>
+          </div>
+          <div class="deliverable-body px-6 md:px-8 pb-8 pt-2 border-t border-stone-200">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-stone-700 pt-4">
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">01</span><span>Basic technical SEO setup.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">02</span><span>SEO-friendly website architecture.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">03</span><span>Page titles and meta descriptions.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">04</span><span>Heading structure optimisation.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">05</span><span>Image optimisation and alt text.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">06</span><span>XML sitemap generation.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">07</span><span>Robots.txt configuration.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">08</span><span>Google Search Console setup assistance.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">09</span><span>Google Analytics 4 integration.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">10</span><span>Mobile-friendliness optimisation.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">11</span><span>Basic local SEO configuration.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category F: Website Security & Performance -->
+        <div class="arch-card bg-white p-0 border border-stone-300 overflow-hidden">
+          <div class="deliverable-toggle p-6 md:p-8 flex items-center justify-between cursor-pointer hover:bg-stone-50/80 transition-colors">
+            <div class="flex items-center gap-4">
+              <span class="w-10 h-10 rounded-full bg-stone-900 text-white flex items-center justify-center font-mono text-sm font-bold">F</span>
+              <div>
+                <h3 class="font-heading text-xl font-semibold text-stone-900">WEBSITE SECURITY & PERFORMANCE</h3>
+                <span class="text-xs font-mono text-stone-500">9 Core Deliverables • Hardened Infrastructure</span>
+              </div>
+            </div>
+            <span class="deliverable-icon font-mono text-xl text-stone-400 transition-transform duration-300">↓</span>
+          </div>
+          <div class="deliverable-body px-6 md:px-8 pb-8 pt-2 border-t border-stone-200">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-stone-700 pt-4">
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">01</span><span>SSL security implementation.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">02</span><span>Basic security hardening.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">03</span><span>Spam protection for enquiry forms.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">04</span><span>Website speed optimisation.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">05</span><span>Image compression and optimisation.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">06</span><span>Browser compatibility testing.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">07</span><span>Responsive performance testing.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">08</span><span>Database security configuration.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">09</span><span>Backup and recovery configuration.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category G: Testing, Deployment & Launch -->
+        <div class="arch-card bg-white p-0 border border-stone-300 overflow-hidden">
+          <div class="deliverable-toggle p-6 md:p-8 flex items-center justify-between cursor-pointer hover:bg-stone-50/80 transition-colors">
+            <div class="flex items-center gap-4">
+              <span class="w-10 h-10 rounded-full bg-stone-900 text-white flex items-center justify-center font-mono text-sm font-bold">G</span>
+              <div>
+                <h3 class="font-heading text-xl font-semibold text-stone-900">TESTING, DEPLOYMENT & LAUNCH</h3>
+                <span class="text-xs font-mono text-stone-500">9 Core Deliverables • Zero-Downtime Handover</span>
+              </div>
+            </div>
+            <span class="deliverable-icon font-mono text-xl text-stone-400 transition-transform duration-300">↓</span>
+          </div>
+          <div class="deliverable-body px-6 md:px-8 pb-8 pt-2 border-t border-stone-200">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-stone-700 pt-4">
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">01</span><span>Complete functionality testing.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">02</span><span>Cross-browser compatibility testing.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">03</span><span>Mobile and tablet testing.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">04</span><span>Form submission testing.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">05</span><span>Navigation and link testing.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">06</span><span>Performance checks.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">07</span><span>Final client review and approval.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">08</span><span>Website deployment to the live domain.</span></div>
+              <div class="flex items-start gap-3"><span class="text-stone-400 font-mono text-xs">09</span><span>Final handover and administrator access.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 06 — THE INVESTMENT (05 / THE INVESTMENT)
+       Exact Cost Breakdown Totaling ₹83,500
+       ======================================================================== -->
+  <section id="section-investment" class="arch-section bg-arch-ivory">
+    <div class="arch-container">
+      <!-- Section Label & Heading -->
+      <div class="max-w-3xl mb-12">
+        <div class="section-tag">05 / THE INVESTMENT</div>
+        <h2 class="section-headline">
+          A clear investment.<br>
+          <span class="font-editorial italic font-normal text-stone-600">A considered build.</span>
+        </h2>
+        <p class="text-stone-700 text-lg md:text-xl font-light leading-relaxed">
+          The proposed investment covers the complete website planning, creative direction, design, development, infrastructure setup and launch activities outlined in this proposal.
+        </p>
+      </div>
+
+      <!-- Cost Breakdown Table (Editorial Presentation) -->
+      <div class="bg-white border border-stone-300 shadow-sm mb-12 overflow-hidden">
+        <div class="p-6 md:p-8 bg-stone-900 text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <span class="text-[11px] font-mono tracking-widest uppercase text-stone-400 block mb-1">PROPOSAL REFERENCE: BRD-2026-001</span>
+            <h3 class="font-heading text-2xl font-medium tracking-tight">Scope & Investment Schedule</h3>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="px-3 py-1 bg-white/10 text-white font-mono text-xs tracking-wider uppercase border border-white/20">
+              ONE-TIME PROJECT FEE
+            </span>
+            <span class="px-3 py-1 bg-white/10 text-stone-300 font-mono text-xs tracking-wider uppercase border border-white/20">
+              GST NOT ADDED
+            </span>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="investment-table">
+            <thead>
+              <tr class="bg-stone-50">
+                <th class="w-16">S.NO</th>
+                <th>DESCRIPTION OF DELIVERABLES</th>
+                <th class="text-right w-44">AMOUNT (INR)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-stone-200">
+              <tr>
+                <td class="font-mono text-xs text-stone-400">01</td>
+                <td>
+                  <span class="font-medium text-stone-900 block">Domain Registration & DNS Configuration (1 Year)</span>
+                  <span class="text-xs text-stone-500">Official .com / .in domain registration, DNS records, MX records, TTL routing</span>
+                </td>
+                <td class="text-right font-mono font-medium text-stone-900">₹4,000</td>
+              </tr>
+              <tr>
+                <td class="font-mono text-xs text-stone-400">02</td>
+                <td>
+                  <span class="font-medium text-stone-900 block">Premium Web Hosting & Server Setup (1 Year)</span>
+                  <span class="text-xs text-stone-500">High-speed SSD cloud server, SSL certificate, 99.9% uptime SLA, CDN edge caching</span>
+                </td>
+                <td class="text-right font-mono font-medium text-stone-900">₹7,000</td>
+              </tr>
+              <tr>
+                <td class="font-mono text-xs text-stone-400">03</td>
+                <td>
+                  <span class="font-medium text-stone-900 block">Website Planning, Architecture & Sitemap</span>
+                  <span class="text-xs text-stone-500">Customer persona mapping, UX sitemap hierarchy, conversion flow wireframes</span>
+                </td>
+                <td class="text-right font-mono font-medium text-stone-900">₹3,000</td>
+              </tr>
+              <tr>
+                <td class="font-mono text-xs text-stone-400">04</td>
+                <td>
+                  <span class="font-medium text-stone-900 block">Custom UI/UX Design & Creative Direction</span>
+                  <span class="text-xs text-stone-500">Architectural visual direction, bespoke typography scale, responsive design screens</span>
+                </td>
+                <td class="text-right font-mono font-medium text-stone-900">₹15,000</td>
+              </tr>
+              <tr>
+                <td class="font-mono text-xs text-stone-400">05</td>
+                <td>
+                  <span class="font-medium text-stone-900 block">Premium Website Design & Frontend Development</span>
+                  <span class="text-xs text-stone-500">Modern semantic code, responsive across mobile/tablet/desktop, fluid transitions</span>
+                </td>
+                <td class="text-right font-mono font-medium text-stone-900">₹18,000</td>
+              </tr>
+              <tr>
+                <td class="font-mono text-xs text-stone-400">06</td>
+                <td>
+                  <span class="font-medium text-stone-900 block">Backend Development & Database Integration</span>
+                  <span class="text-xs text-stone-500">Relational database configuration, enquiry storage, security endpoints, authentication</span>
+                </td>
+                <td class="text-right font-mono font-medium text-stone-900">₹15,000</td>
+              </tr>
+              <tr>
+                <td class="font-mono text-xs text-stone-400">07</td>
+                <td>
+                  <span class="font-medium text-stone-900 block">Dynamic Project Portfolio & Admin Dashboard</span>
+                  <span class="text-xs text-stone-500">Custom CMS to create, edit, upload photos, and update Ongoing & Completed projects</span>
+                </td>
+                <td class="text-right font-mono font-medium text-stone-900">₹8,500</td>
+              </tr>
+              <tr>
+                <td class="font-mono text-xs text-stone-400">08</td>
+                <td>
+                  <span class="font-medium text-stone-900 block">Enquiry Forms, WhatsApp & Third-Party Integrations</span>
+                  <span class="text-xs text-stone-500">Instant WhatsApp routing, Click-to-call, lead email triggers, Google Maps embed</span>
+                </td>
+                <td class="text-right font-mono font-medium text-stone-900">₹4,000</td>
+              </tr>
+              <tr>
+                <td class="font-mono text-xs text-stone-400">09</td>
+                <td>
+                  <span class="font-medium text-stone-900 block">Basic SEO & Google Analytics Integration</span>
+                  <span class="text-xs text-stone-500">Meta tags, open graph, Google Analytics 4, Google Search Console, XML sitemap</span>
+                </td>
+                <td class="text-right font-mono font-medium text-stone-900">₹5,000</td>
+              </tr>
+              <tr>
+                <td class="font-mono text-xs text-stone-400">10</td>
+                <td>
+                  <span class="font-medium text-stone-900 block">Testing, Deployment & Website Launch</span>
+                  <span class="text-xs text-stone-500">Cross-device verification, speed audit, security hardening, final domain switch</span>
+                </td>
+                <td class="text-right font-mono font-medium text-stone-900">₹4,000</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="bg-arch-limestone border-t-2 border-stone-900">
+                <td colspan="2" class="p-6 md:p-8">
+                  <span class="font-mono text-xs uppercase tracking-widest text-stone-500 block mb-1">TOTAL PROJECT INVESTMENT</span>
+                  <span class="font-heading text-2xl md:text-3xl font-bold text-stone-900 tracking-tight">TOTAL PROJECT INVESTMENT</span>
+                  <span class="text-xs font-mono text-stone-500 block mt-1">One-time comprehensive fee for complete planning, design, build and launch</span>
+                </td>
+                <td class="p-6 md:p-8 text-right align-middle">
+                  <span class="font-mono text-3xl md:text-5xl font-bold text-stone-900 tracking-tight block">
+                    ₹83,500
+                  </span>
+                  <span class="text-[11px] font-mono text-stone-500 uppercase tracking-widest block mt-1">GST NOT ADDED</span>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 07 — PROJECT ROADMAP (06 / THE ROADMAP)
+       6 Phases (6–8 Weeks Timeline)
+       ======================================================================== -->
+  <section id="section-roadmap" class="arch-section arch-section-alt">
+    <div class="arch-container">
+      <!-- Section Label & Heading -->
+      <div class="max-w-3xl mb-16">
+        <div class="section-tag">06 / THE ROADMAP</div>
+        <h2 class="section-headline">
+          From first conversation to launch.
+        </h2>
+        <p class="text-stone-700 text-lg md:text-xl font-light leading-relaxed mb-4">
+          Estimated overall project completion: <strong class="text-stone-900 font-medium">6–8 weeks</strong> from advance payment and receipt of required content.
+        </p>
+        <p class="text-stone-500 text-sm font-mono">
+          * Note: The timeline may vary depending on content availability, feedback and approvals.
+        </p>
+      </div>
+
+      <!-- Architectural Timeline Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <!-- Phase 01 -->
+        <div class="roadmap-phase-card arch-card bg-white p-8 border border-stone-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 bg-stone-100 text-stone-800 text-[11px] font-mono font-bold tracking-wider">PHASE 01</span>
+              <span class="font-mono text-xs text-stone-500">4–5 DAYS</span>
+            </div>
+            <h3 class="font-heading text-xl font-semibold text-stone-900 mb-2">DISCOVER</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">
+              Planning, research and website architecture. Mapping sitemap, target property buyers, brand tonality, and conversion flows.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-200 text-[11px] font-mono text-stone-400">
+            DELIVERABLE: APPROVED SITEMAP & WIREFRAMES
+          </div>
+        </div>
+
+        <!-- Phase 02 -->
+        <div class="roadmap-phase-card arch-card bg-white p-8 border border-stone-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 bg-stone-100 text-stone-800 text-[11px] font-mono font-bold tracking-wider">PHASE 02</span>
+              <span class="font-mono text-xs text-stone-500">7–10 DAYS</span>
+            </div>
+            <h3 class="font-heading text-xl font-semibold text-stone-900 mb-2">DESIGN</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">
+              UI/UX design and creative approval. Crafting the custom homepage, typography system, component library, and responsive mobile mockups.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-200 text-[11px] font-mono text-stone-400">
+            DELIVERABLE: HIGH-FIDELITY DESIGN APPROVAL
+          </div>
+        </div>
+
+        <!-- Phase 03 -->
+        <div class="roadmap-phase-card arch-card bg-white p-8 border border-stone-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 bg-stone-100 text-stone-800 text-[11px] font-mono font-bold tracking-wider">PHASE 03</span>
+              <span class="font-mono text-xs text-stone-500">10–12 DAYS</span>
+            </div>
+            <h3 class="font-heading text-xl font-semibold text-stone-900 mb-2">DEVELOP</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">
+              Frontend development and responsive website build. Clean HTML5/CSS/JavaScript engineering, fluid animations, navigation menus, and footers.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-200 text-[11px] font-mono text-stone-400">
+            DELIVERABLE: INTERACTIVE FRONTEND PROTOTYPE
+          </div>
+        </div>
+
+        <!-- Phase 04 -->
+        <div class="roadmap-phase-card arch-card bg-white p-8 border border-stone-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 bg-stone-100 text-stone-800 text-[11px] font-mono font-bold tracking-wider">PHASE 04</span>
+              <span class="font-mono text-xs text-stone-500">7–10 DAYS</span>
+            </div>
+            <h3 class="font-heading text-xl font-semibold text-stone-900 mb-2">INTEGRATE</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">
+              Backend, database and integrations. Database setup, custom CMS project manager, WhatsApp links, Google Maps API, and enquiry forms.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-200 text-[11px] font-mono text-stone-400">
+            DELIVERABLE: CMS & DATABASE WORKING END-TO-END
+          </div>
+        </div>
+
+        <!-- Phase 05 -->
+        <div class="roadmap-phase-card arch-card bg-white p-8 border border-stone-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 bg-stone-100 text-stone-800 text-[11px] font-mono font-bold tracking-wider">PHASE 05</span>
+              <span class="font-mono text-xs text-stone-500">5–7 DAYS</span>
+            </div>
+            <h3 class="font-heading text-xl font-semibold text-stone-900 mb-2">REFINE</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">
+              Testing, optimisation and revisions. Cross-browser stress testing, mobile responsiveness audit, speed benchmarks, and client feedback integration.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-200 text-[11px] font-mono text-stone-400">
+            DELIVERABLE: STAGING REVIEW & CLIENT SIGN-OFF
+          </div>
+        </div>
+
+        <!-- Phase 06 -->
+        <div class="roadmap-phase-card arch-card bg-stone-900 text-white p-8 border border-stone-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 bg-white/20 text-white text-[11px] font-mono font-bold tracking-wider">PHASE 06</span>
+              <span class="font-mono text-xs text-stone-300">2–3 DAYS</span>
+            </div>
+            <h3 class="font-heading text-xl font-semibold text-white mb-2">LAUNCH</h3>
+            <p class="text-stone-300 text-sm leading-relaxed">
+              Deployment and final handover. Live domain propagation, SSL activation, Google Search Console submission, and administrator credentials handover.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 text-[11px] font-mono text-stone-400">
+            DELIVERABLE: LIVE WEBSITE & ADMIN ACCESS HANDOVER
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 08 — PAYMENT & PARTNERSHIP (07 / WORKING TOGETHER)
+       Payment Milestones, Client Responsibilities, Warranty & Terms
+       ======================================================================== -->
+  <section id="section-partnership" class="arch-section bg-arch-ivory">
+    <div class="arch-container">
+      <!-- Section Label & Heading -->
+      <div class="max-w-3xl mb-16">
+        <div class="section-tag">07 / WORKING TOGETHER</div>
+        <h2 class="section-headline">
+          A clear process.<br>
+          <span class="font-editorial italic font-normal text-stone-600">A collaborative partnership.</span>
+        </h2>
+      </div>
+
+      <!-- Payment Milestones (Cards) -->
+      <div class="mb-16">
+        <span class="font-mono text-xs text-stone-400 uppercase tracking-widest block mb-6">STRUCTURED PAYMENT MILESTONES</span>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- 50% -->
+          <div class="arch-card bg-white p-6 border border-stone-300 relative">
+            <span class="text-4xl font-heading font-semibold text-stone-900 block mb-2">50%</span>
+            <span class="font-mono text-xs font-bold text-stone-900 block mb-3">ADVANCE PAYMENT</span>
+            <p class="text-stone-600 text-xs leading-relaxed mb-4">
+              Upon quotation approval and project confirmation. Initiates research, architecture, domain & server setup.
+            </p>
+            <div class="pt-3 border-t border-stone-200 font-mono text-xs font-semibold text-stone-800">
+              ₹41,750
+            </div>
+          </div>
+
+          <!-- 20% -->
+          <div class="arch-card bg-white p-6 border border-stone-300 relative">
+            <span class="text-4xl font-heading font-semibold text-stone-900 block mb-2">20%</span>
+            <span class="font-mono text-xs font-bold text-stone-900 block mb-3">SECOND INSTALMENT</span>
+            <p class="text-stone-600 text-xs leading-relaxed mb-4">
+              Upon completion and approval of website design and frontend development.
+            </p>
+            <div class="pt-3 border-t border-stone-200 font-mono text-xs font-semibold text-stone-800">
+              ₹16,700
+            </div>
+          </div>
+
+          <!-- 20% -->
+          <div class="arch-card bg-white p-6 border border-stone-300 relative">
+            <span class="text-4xl font-heading font-semibold text-stone-900 block mb-2">20%</span>
+            <span class="font-mono text-xs font-bold text-stone-900 block mb-3">THIRD INSTALMENT</span>
+            <p class="text-stone-600 text-xs leading-relaxed mb-4">
+              Upon completion of backend development and major website functionality.
+            </p>
+            <div class="pt-3 border-t border-stone-200 font-mono text-xs font-semibold text-stone-800">
+              ₹16,700
+            </div>
+          </div>
+
+          <!-- 10% -->
+          <div class="arch-card bg-white p-6 border border-stone-300 relative">
+            <span class="text-4xl font-heading font-semibold text-stone-900 block mb-2">10%</span>
+            <span class="font-mono text-xs font-bold text-stone-900 block mb-3">FINAL PAYMENT</span>
+            <p class="text-stone-600 text-xs leading-relaxed mb-4">
+              Before final deployment and website handover to live domain.
+            </p>
+            <div class="pt-3 border-t border-stone-200 font-mono text-xs font-semibold text-stone-800">
+              ₹8,350
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Two-Column Dossier: Client Responsibilities & Warranty -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        <!-- Client Responsibilities -->
+        <div class="arch-card bg-arch-limestone p-8 border border-stone-300">
+          <span class="font-mono text-xs text-stone-500 uppercase tracking-widest block mb-4">ROLES & COLLABORATION</span>
+          <h3 class="font-heading text-2xl font-semibold text-stone-900 mb-4">CLIENT RESPONSIBILITIES</h3>
+          <p class="text-stone-600 text-sm mb-4">The client shall provide:</p>
+          <ul class="space-y-3 text-sm text-stone-700 mb-6">
+            <li class="flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-stone-900 mt-2 flex-shrink-0"></span>
+              <span>Company logo and brand assets.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-stone-900 mt-2 flex-shrink-0"></span>
+              <span>Company profile and business information.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-stone-900 mt-2 flex-shrink-0"></span>
+              <span>Project photographs, videos and descriptions.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-stone-900 mt-2 flex-shrink-0"></span>
+              <span>Contact information and business address.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-stone-900 mt-2 flex-shrink-0"></span>
+              <span>Service descriptions and relevant content.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-stone-900 mt-2 flex-shrink-0"></span>
+              <span>Necessary approvals, permissions and legal documentation.</span>
+            </li>
+          </ul>
+          <div class="p-4 bg-white border border-stone-300 text-xs text-stone-600 leading-relaxed">
+            <strong class="text-stone-900 block mb-1">Brandyce Content Support:</strong>
+            Brandyce will assist with content structuring and placement. Professional photography, videography, extensive copywriting and paid stock assets are not included unless separately agreed.
+          </div>
+        </div>
+
+        <!-- Warranty & Post-Launch Support -->
+        <div class="arch-card bg-arch-limestone p-8 border border-stone-300 flex flex-col justify-between">
+          <div>
+            <span class="font-mono text-xs text-stone-500 uppercase tracking-widest block mb-4">POST-LAUNCH COMMITMENT</span>
+            <h3 class="font-heading text-2xl font-semibold text-stone-900 mb-4">WARRANTY & POST-LAUNCH SUPPORT</h3>
+            <ul class="space-y-3 text-sm text-stone-700 mb-6">
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-stone-900 mt-2 flex-shrink-0"></span>
+                <span><strong>30 days of complimentary technical support</strong> after website launch.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-stone-900 mt-2 flex-shrink-0"></span>
+                <span>Resolution of development-related bugs within the agreed scope.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-stone-900 mt-2 flex-shrink-0"></span>
+                <span>Assistance with basic website administration.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-stone-900 mt-2 flex-shrink-0"></span>
+                <span>Guidance on updating projects and website content.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-stone-900 mt-2 flex-shrink-0"></span>
+                <span>Initial website performance monitoring.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="p-4 bg-white border border-stone-300 text-xs text-stone-600">
+            * Annual domain and hosting renewals after the first year will be charged separately at cost.
+          </div>
+        </div>
+      </div>
+
+      <!-- Formal Terms & Conditions (Verbatim) -->
+      <div class="bg-white border border-stone-300 p-8 md:p-12">
+        <span class="font-mono text-xs text-stone-400 uppercase tracking-widest block mb-4">LEGAL FRAMEWORK</span>
+        <h3 class="font-heading text-2xl font-semibold text-stone-900 mb-8">TERMS & CONDITIONS</h3>
+        <ol class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-stone-700 list-decimal list-inside leading-relaxed">
+          <li class="pl-2">The quotation covers only the deliverables and functionalities explicitly mentioned in this proposal.</li>
+          <li class="pl-2">Any additional pages, modules, integrations or functionalities outside the agreed scope will be quoted separately.</li>
+          <li class="pl-2">The proposal includes up to two reasonable rounds of design revisions.</li>
+          <li class="pl-2">Major design changes after approval may attract additional charges.</li>
+          <li class="pl-2">Delays in providing content, approvals or feedback may affect the delivery timeline.</li>
+          <li class="pl-2">Domain and hosting services are subject to the respective service providers' terms and renewal policies.</li>
+          <li class="pl-2">Third-party premium plugins, paid software licences, API subscriptions and external service charges are excluded unless specifically mentioned.</li>
+          <li class="pl-2">Website content and project materials must be legally authorised for use by the client.</li>
+          <li class="pl-2">Final website ownership and administrative credentials will be handed over upon receipt of all outstanding payments.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 09 — THE CLOSING EXPERIENCE & CLIENT APPROVAL AREA
+       Full-Screen Architectural Visual, Both Logos Tastefully Exhibited,
+       Interactive Signature Canvas, Date, Approval Button & CTA
+       ======================================================================== -->
+  <section id="section-closing" class="relative bg-stone-950 text-white py-24 md:py-36 overflow-hidden">
+    <!-- Architectural Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=2000&auto=format&fit=crop" alt="Architectural Twilight Residence" class="w-full h-full object-cover opacity-25 filter grayscale contrast-125">
+      <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/80 to-stone-950/90"></div>
+    </div>
+
+    <div class="arch-container relative z-10">
+      <!-- Top Closing Headline -->
+      <div class="max-w-3xl mb-16">
+        <span class="font-mono text-xs text-stone-400 tracking-[0.25em] uppercase block mb-4">THE PARTNERSHIP</span>
+        <h2 class="font-heading text-4xl sm:text-5xl md:text-7xl font-medium tracking-tight text-white mb-6 leading-tight">
+          Let's build a digital presence<br>
+          <span class="font-editorial italic font-normal text-stone-400">that stands apart.</span>
+        </h2>
+        <div class="space-y-4 text-stone-300 text-lg md:text-xl font-light leading-relaxed max-w-2xl">
+          <p>
+            We look forward to partnering with <strong class="text-white font-medium">Aramane Royal Builder</strong> to create a sophisticated digital platform that reflects the company's expertise, credibility and vision.
+          </p>
+          <p>
+            At Brandyce, we believe a website should do more than look good. It should build trust, create meaningful connections and help businesses move forward.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tasteful Dual Brand Showcase: Brandyce × Aramane -->
+      <div class="p-8 md:p-12 border border-white/15 bg-white/[0.03] backdrop-blur-md mb-16">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-8 border-b border-white/10">
+          <!-- Brandyce Side -->
+          <div class="flex items-center gap-4">
+            <img src="assets/images/brandyce_logo_dark.png" alt="Brandyce Logo" class="h-12 w-auto object-contain">
+            <div class="border-l border-white/20 pl-4 text-xs font-mono">
+              <span class="text-stone-400 uppercase tracking-widest block text-[10px]">Prepared By</span>
+              <strong class="text-white block font-sans text-sm">BRANDYCE</strong>
+              <span class="text-stone-400 text-[10px]">Digital Marketing | Branding | Web Development</span>
+            </div>
+          </div>
+
+          <div class="font-heading text-2xl text-stone-500 font-light">×</div>
+
+          <!-- Aramane Side -->
+          <div class="flex items-center gap-4">
+            <img src="assets/images/aramane_logo.png" alt="Aramane Royal Builder Logo" class="h-14 w-auto object-contain bg-white/95 p-1 rounded">
+            <div class="border-l border-white/20 pl-4 text-xs font-mono">
+              <span class="text-stone-400 uppercase tracking-widest block text-[10px]">Prepared For</span>
+              <strong class="text-white block font-sans text-sm">ARAMANE ROYAL BUILDER</strong>
+              <span class="text-stone-400 text-[10px]">Real Estate & Construction</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proposal Approval Dossier -->
+        <div class="pt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs font-mono">
+          <div>
+            <span class="text-stone-500 block mb-1">PROPOSAL CODE</span>
+            <span class="text-white font-bold">BRD-2026-001</span>
+          </div>
+          <div>
+            <span class="text-stone-500 block mb-1">TOTAL INVESTMENT</span>
+            <span class="text-white font-bold">₹83,500 (ONE-TIME FEE)</span>
+          </div>
+          <div>
+            <span class="text-stone-500 block mb-1">ESTIMATED LAUNCH</span>
+            <span class="text-white font-bold">6–8 WEEKS FROM ADVANCE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Client Approval Area (Interactive) -->
+      <div class="arch-card bg-arch-ivory text-arch-charcoal p-8 md:p-12 border border-stone-300 mb-16 shadow-2xl">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-8 pb-6 border-b border-stone-200">
+          <div>
+            <span class="font-mono text-xs text-stone-500 uppercase tracking-widest block mb-1">OFFICIAL CLIENT ACCEPTANCE</span>
+            <h3 class="font-heading text-2xl md:text-3xl font-semibold text-stone-900">Client Approval</h3>
+          </div>
+          <div id="approvalStatusBadge" class="inline-flex items-center text-xs font-mono px-3 py-1 bg-amber-50 text-amber-900 border border-amber-200">
+            <span class="inline-block w-2 h-2 rounded-full bg-amber-500 mr-2"></span>
+            Awaiting Client Signature
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-8">
+          <!-- Signature Canvas Column -->
+          <div class="lg:col-span-7">
+            <div class="flex items-center justify-between mb-2">
+              <label class="font-mono text-xs uppercase tracking-wider text-stone-700 font-bold">
+                Authorised Signature:
+              </label>
+              <button id="clearSignatureBtn" class="text-[11px] font-mono text-stone-500 hover:text-stone-900 underline">
+                Clear Pad
+              </button>
+            </div>
+            <div class="relative">
+              <canvas id="signaturePadCanvas" class="signature-canvas"></canvas>
+              <div class="absolute bottom-2 right-2 pointer-events-none text-[10px] font-mono text-stone-400">
+                SIGN ABOVE USING MOUSE OR TOUCH
+              </div>
+            </div>
+          </div>
+
+          <!-- Signee Details Form -->
+          <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
+            <div>
+              <label class="font-mono text-xs uppercase tracking-wider text-stone-700 font-bold block mb-2">
+                Name of Authorised Signatory:
+              </label>
+              <input id="signeeNameInput" type="text" placeholder="e.g. Managing Director / Partner" class="w-full px-4 py-3 bg-white border border-stone-300 focus:border-stone-900 outline-none text-stone-900 font-sans text-sm">
+            </div>
+
+            <div>
+              <label class="font-mono text-xs uppercase tracking-wider text-stone-700 font-bold block mb-2">
+                Date:
+              </label>
+              <input id="signatureDateInput" type="text" class="w-full px-4 py-3 bg-white border border-stone-300 focus:border-stone-900 outline-none text-stone-900 font-mono text-sm">
+            </div>
+
+            <div class="pt-2">
+              <button id="confirmApprovalBtn" class="w-full btn-arch py-3.5 text-xs">
+                CONFIRM & DIGITALLY SIGN PROPOSAL
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-stone-200 text-xs font-mono text-stone-500">
+          <span>Digital signature timestamped with Reference BRD-2026-001</span>
+          <div class="flex items-center gap-3">
+            <button onclick="window.print()" class="underline hover:text-stone-900">
+              Print Official Proposal
+            </button>
+            <span>•</span>
+            <button class="download-proposal-pdf-btn underline hover:text-stone-900">
+              Download PDF Document
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Final Master CTA -->
+      <div class="text-center py-6">
+        <button class="open-discuss-btn btn-arch bg-white text-stone-950 border-white hover:bg-stone-200 hover:text-stone-950 text-sm md:text-base py-5 px-10 shadow-2xl tracking-widest font-semibold">
+          LET'S DISCUSS THIS PROJECT →
+        </button>
+        <span class="block mt-4 text-xs font-mono text-stone-400">
+          Direct partnership discussion with Brandyce Leadership Team
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="fixed bottom-6 right-6 z-40 w-12 h-12 bg-stone-900 text-white rounded-full flex items-center justify-center border border-stone-700 shadow-xl opacity-0 pointer-events-none transition-all duration-300 hover:scale-105" title="Back to top">
+    ↑
+  </button>
+
+  <!-- ========================================================================
+       MODAL 01: INTERACTIVE CMS / ADMIN DASHBOARD SIMULATOR
+       Proves Backend & CMS Deliverables (Section 05)
+       ======================================================================== -->
+  <div id="adminDemoModal" class="modal-overlay">
+    <div class="modal-card">
+      <!-- Admin Modal Header -->
+      <div class="bg-stone-900 text-white px-6 py-4 flex items-center justify-between border-b border-stone-800">
+        <div class="flex items-center gap-3">
+          <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+          <span class="font-heading text-lg font-medium tracking-tight">Aramane Royal Builder — Admin CMS Preview</span>
+        </div>
+        <button id="closeAdminDemoBtn" class="text-stone-400 hover:text-white font-mono text-lg">✕</button>
+      </div>
+
+      <!-- Admin Modal Body -->
+      <div class="p-6 md:p-8 space-y-6">
+        <div class="p-4 bg-emerald-50 border border-emerald-200 text-xs text-emerald-900 font-mono flex items-center justify-between">
+          <span>● LIVE SIMULATION: This demonstrates the custom project management panel Brandyce will develop.</span>
+          <span class="font-bold">STATUS: READY</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono text-xs">
+          <div class="p-4 bg-white border border-stone-200">
+            <span class="text-stone-400 block mb-1">TOTAL DEVELOPMENTS</span>
+            <span class="text-2xl font-bold text-stone-900">14</span>
+          </div>
+          <div class="p-4 bg-white border border-stone-200">
+            <span class="text-stone-400 block mb-1">ACTIVE ENQUIRIES</span>
+            <span class="text-2xl font-bold text-emerald-700">28 This Month</span>
+          </div>
+          <div class="p-4 bg-white border border-stone-200">
+            <span class="text-stone-400 block mb-1">STORAGE USED</span>
+            <span class="text-2xl font-bold text-stone-900">1.2 GB / 50 GB</span>
+          </div>
+        </div>
+
+        <!-- Project Management Simulation Table -->
+        <div class="border border-stone-200 bg-white">
+          <div class="p-4 bg-stone-100 border-b border-stone-200 flex items-center justify-between">
+            <span class="font-mono text-xs uppercase tracking-wider text-stone-800 font-bold">PROJECT LISTINGS</span>
+            <button id="adminSimAddProjectBtn" class="px-3 py-1 bg-stone-900 text-white text-xs font-mono hover:bg-stone-800">
+              + ADD NEW PROJECT
+            </button>
+          </div>
+          <table class="w-full text-left text-sm">
+            <thead class="bg-stone-50 font-mono text-xs text-stone-500 border-b border-stone-200">
+              <tr>
+                <th class="p-3">Project Name</th>
+                <th class="p-3">Status</th>
+                <th class="p-3">Location</th>
+                <th class="p-3 text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="adminSimProjectsList" class="divide-y divide-stone-200">
+              <tr>
+                <td class="p-3 font-medium text-stone-900">Aramane Royal Residency</td>
+                <td class="p-3 text-xs font-mono text-emerald-700"><span class="px-2 py-0.5 bg-emerald-50 rounded">Ongoing</span></td>
+                <td class="p-3 text-stone-600 text-xs">Whitefield, Bangalore</td>
+                <td class="p-3 text-right"><span class="text-xs text-stone-500 font-mono">Edit • Photos</span></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium text-stone-900">Royal Palm Villas</td>
+                <td class="p-3 text-xs font-mono text-blue-700"><span class="px-2 py-0.5 bg-blue-50 rounded">Completed</span></td>
+                <td class="p-3 text-stone-600 text-xs">North Bangalore</td>
+                <td class="p-3 text-right"><span class="text-xs text-stone-500 font-mono">Edit • Photos</span></td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium text-stone-900">Aramane Heritage Enclave</td>
+                <td class="p-3 text-xs font-mono text-emerald-700"><span class="px-2 py-0.5 bg-emerald-50 rounded">Ongoing</span></td>
+                <td class="p-3 text-stone-600 text-xs">Hebbal, Bangalore</td>
+                <td class="p-3 text-right"><span class="text-xs text-stone-500 font-mono">Edit • Photos</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL 02: CONSULTATION & DIRECT WHATSAPP DISCUSSION
+       Direct WhatsApp Click-To-Chat, Phone Dial & Consultation Launcher
+       ======================================================================== -->
+  <div id="discussModal" class="modal-overlay">
+    <div class="modal-card max-w-xl">
+      <div class="bg-stone-900 text-white px-6 py-5 flex items-center justify-between border-b border-stone-800">
+        <div>
+          <span class="text-[10px] font-mono tracking-widest uppercase text-stone-400 block mb-1">BRANDYCE × ARAMANE ROYAL BUILDER</span>
+          <h3 class="font-heading text-xl font-medium tracking-tight">Let's Discuss This Project</h3>
+        </div>
+        <button id="closeDiscussBtn" class="text-stone-400 hover:text-white font-mono text-lg">✕</button>
+      </div>
+
+      <div class="p-6 md:p-8 space-y-6">
+        <p class="text-stone-700 text-sm leading-relaxed">
+          Connect directly with the Brandyce creative and technical leads to align on project initiation, scheduling, content collation, and first payment milestone.
+        </p>
+
+        <!-- Direct Action 1: WhatsApp -->
+        <a href="https://wa.me/?text=Hello%20Brandyce%20team,%20I%20have%20reviewed%20the%20Aramane%20Royal%20Builder%20website%20proposal%20BRD-2026-001%20and%20would%20like%20to%20discuss%20the%20next%20steps." target="_blank" class="flex items-center justify-between p-4 bg-emerald-600 text-white hover:bg-emerald-700 transition-colors">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">💬</span>
+            <div>
+              <strong class="block text-sm">Direct WhatsApp Consultation</strong>
+              <span class="text-xs text-emerald-100">Instant response with proposal team</span>
+            </div>
+          </div>
+          <span class="font-mono text-xs">LAUNCH CHAT →</span>
+        </a>
+
+        <!-- Direct Action 2: Phone Call -->
+        <a href="tel:+919876543210" class="flex items-center justify-between p-4 bg-stone-900 text-white hover:bg-stone-800 transition-colors">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">📞</span>
+            <div>
+              <strong class="block text-sm">Schedule Direct Call</strong>
+              <span class="text-xs text-stone-300">Speak with Creative Director</span>
+            </div>
+          </div>
+          <span class="font-mono text-xs">CALL NOW →</span>
+        </a>
+
+        <!-- Direct Action 3: Email -->
+        <a href="mailto:contact@brandyce.com?subject=Aramane%20Royal%20Builder%20Proposal%20BRD-2026-001%20Discussion" class="flex items-center justify-between p-4 border border-stone-300 bg-white hover:bg-stone-50 transition-colors text-stone-900">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">✉️</span>
+            <div>
+              <strong class="block text-sm">Formal Email Query</strong>
+              <span class="text-xs text-stone-500">Subject: Ref BRD-2026-001</span>
+            </div>
+          </div>
+          <span class="font-mono text-xs text-stone-500">SEND EMAIL →</span>
+        </a>
+
+        <div class="pt-4 border-t border-stone-200 text-center">
+          <span class="text-xs font-mono text-stone-400">Brandyce Agency • Proposal Ref: BRD-2026-001</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="scripts/main.js"></script>
+</body>
+</html>

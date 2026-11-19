@@ -1,0 +1,20 @@
+{
+  "name": "brandyce-aramane-proposal",
+  "version": "1.0.0",
+  "description": "Premium Interactive Website Design & Development Proposal for Aramane Royal Builder by Brandyce",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "serve": "node server.js"
+  },
+  "keywords": [
+    "proposal",
+    "architecture",
+    "real-estate",
+    "brandyce",
+    "aramane-royal-builder"
+  ],
+  "author": "Brandyce Agency",
+  "license": "UNLICENSED",
+  "private": true
+}
