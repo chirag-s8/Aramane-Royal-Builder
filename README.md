@@ -53,7 +53,7 @@ You can run the built-in local development server:
 ```bash
 npm start
 # or:
-node local-server.js
+node server.js
 ```
 Then visit: `http://localhost:3000`
 
@@ -64,7 +64,7 @@ Then visit: `http://localhost:3000`
 This project is configured as a pure **Static Website** for Vercel deployment:
 - **Root Entrypoint:** Served directly from `index.html`.
 - **Framework Preset:** `Other` (Static Site).
-- **Configuration:** Handled automatically via `vercel.json`.
+- **Configuration:** Handled automatically via `vercel.json` and `.vercelignore`.
 - **Static Assets:** Clean routing for `/styles`, `/scripts`, `/assets/images`, and `/assets/docs/Aramane_Royal_Builder_Proposal_BRD-2026-001.pdf`.
 
 ---
@@ -75,8 +75,9 @@ This project is configured as a pure **Static Website** for Vercel deployment:
 Aramane Proposal/
 ├── index.html                   # Master proposal website
 ├── vercel.json                  # Vercel static deployment configuration
+├── .vercelignore                # Excludes local server.js from Vercel deployment
 ├── package.json                 # Project configuration (scripts & metadata)
-├── local-server.js              # Local development preview server
+├── server.js                    # Local development preview server
 ├── README.md                    # Project documentation & walkthrough
 ├── assets/
 │   ├── images/

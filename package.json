@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "Premium Interactive Website Design & Development Proposal for Aramane Royal Builder by Brandyce",
   "scripts": {
-    "dev": "node local-server.js",
-    "serve": "node local-server.js",
-    "start": "node local-server.js"
+    "start": "node server.js",
+    "serve": "node server.js"
   },
   "keywords": [
     "proposal",
